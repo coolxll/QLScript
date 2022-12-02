@@ -352,9 +352,9 @@ class BiliBili(CheckIn):
 
 
 if __name__ == "__main__":
-    # print(os.path.dirname(os.getcwd())
-    with open("../../config.json", "r", encoding="utf-8") as f:
-    # with open(os.path.join("D:\\Workspace\\Repository\\qinglong\\ql\\data\\scripts", "config.json"), "r", encoding="utf-8") as f:
-        datas = json.loads(f.read())
-    _check_item = datas.get("BILIBILI", [])[0]
+    _check_item = {}
+    _check_item['coin_num'] = 0
+    _check_item['coin_type'] = 1
+    _check_item['silver2coin'] = true
+    _check_item['cookie'] = os.env('BILIBILI_COOKIE')
     print(BiliBili(check_item=_check_item).main())

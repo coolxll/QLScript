@@ -80,9 +80,7 @@ class V2ex(CheckIn):
 
 
 if __name__ == "__main__":
-    with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "config.json"), "r", encoding="utf-8") as f:
-    # with open(os.path.join("D:\\Workspace\\Repository\\qinglong\\ql\\data\\scripts", "config.json"), "r", encoding="utf-8") as f:
-        datas = json.loads(f.read())
-    _check_item = datas.get("V2EX", [])[0]
+    _check_item = {}
+    _check_item['cookie'] = os.env("V2EX_COOKIE")
 
     print(V2ex(check_item=_check_item).main())
