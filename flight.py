@@ -8,6 +8,7 @@ import sqlite3
 conn = sqlite3.connect('flight.db')
 
 '''
+CRON: */10 * * * *
 '''
 
 def init_db():
