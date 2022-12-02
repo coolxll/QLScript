@@ -5,10 +5,8 @@ import os
 import requests
 from requests import utils
 
-from dailycheckin import CheckIn
 
-
-class BiliBili(CheckIn):
+class BiliBili:
     name = "Bilibili"
 
     # TODO 待测试，需要大会员账号测试领取福利
