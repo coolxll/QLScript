@@ -5,11 +5,12 @@ import notify
 import datetime
 import sqlite3
 
-conn = sqlite3.connect('flight.db')
+"""
+cron: */10 * * * *
+new Env('航空公司公告通知');
+"""
 
-'''
-CRON: */10 * * * *
-'''
+conn = sqlite3.connect('flight.db')
 
 def init_db():
     # 连仓库

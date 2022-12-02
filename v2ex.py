@@ -10,6 +10,10 @@ from requests import utils
 
 urllib3.disable_warnings()
 
+"""
+cron: 50 10 * * *
+new Env('V2EX论坛签到');
+"""
 
 class V2ex:
     name = "V2EX 论坛"

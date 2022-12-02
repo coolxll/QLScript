@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+"""
+cron: 50 10 * * *
+new Env('BILIBILI签到');
+"""
 import json
 import os
 
