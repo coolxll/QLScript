@@ -80,5 +80,5 @@ class V2ex:
 if __name__ == "__main__":
     _check_item = {}
     _check_item['cookie'] = os.getenv("V2EX_COOKIE")
-
+    _check_item['proxy'] = os.getenv("V2EX_PROXY")
     print(V2ex(check_item=_check_item).main())
