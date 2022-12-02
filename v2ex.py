@@ -8,12 +8,10 @@ import requests
 import urllib3
 from requests import utils
 
-from dailycheckin import CheckIn
-
 urllib3.disable_warnings()
 
 
-class V2ex(CheckIn):
+class V2ex:
     name = "V2EX 论坛"
 
     def __init__(self, check_item):
@@ -81,6 +79,6 @@ class V2ex(CheckIn):
 
 if __name__ == "__main__":
     _check_item = {}
-    _check_item['cookie'] = os.env("V2EX_COOKIE")
+    _check_item['cookie'] = os.getenv("V2EX_COOKIE")
 
     print(V2ex(check_item=_check_item).main())
