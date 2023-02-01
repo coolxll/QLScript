@@ -178,9 +178,11 @@ class UnicomSign():
 
 
 if __name__ == '__main__':
+    notifyStr = ""
     for (phone, password) in passwordList:
         user = UnicomSign()
         user.login(phone, password)  # 用户登录   这里需要更改
         user.daysign()  # 日常签到领积分，1g流量日包
         user.daytask()  # 日常任务
-        notify.send('联通营业厅签到通知', user.resp)
+        notifyStr += phone + os.linesep + user.resp
+    notify.send('联通营业厅签到通知', notifyStr)
