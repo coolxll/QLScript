@@ -355,7 +355,7 @@ class BiliBili:
 
 if __name__ == "__main__":
     _check_item = {}
-    _check_item['coin_num'] = 0
+    _check_item['coin_num'] = 4
     _check_item['coin_type'] = 1
     _check_item['silver2coin'] = True
     _check_item['cookie'] = os.getenv('BILIBILI_COOKIE')
