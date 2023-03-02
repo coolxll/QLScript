@@ -215,3 +215,7 @@ def run():
     except Exception as e:
         print(e)
         print("可能密码错误")
+
+
+if __name__ == '__main__':
+    run()
